@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.talend.repository.feature"
+      label="Repository Feature"
+      version="6.0.1.20150908_1633"
+      provider-name=".Talend SA.">
+
+   <description url="http://www.talend.com/online/featuresdescription.html#repository-feature">
+      Complete description about this feature at http://www.talend.com/online/featuresdescription.html#repository-feature
+   </description>
+
+   <copyright url="http://www.talend.com/online/copyright.txt">
+      Copyright Talend 2006, 2007
+   </copyright>
+
+   <license>
+      The licence are describe in branding feature
+   </license>
+
+   <url>
+      <update label="CORE Talend update site for milestones" url="http://talendforge.org/core/updatesite/testing/"/>
+      <discovery label="Talend web site" url="http://www.talend.com"/>
+   </url>
+
+   <plugin
+         id="org.talend.repository"
+         download-size="2436"
+         install-size="4634"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.localprovider"
+         download-size="52"
+         install-size="125"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.localprovider.nl"
+         download-size="9"
+         install-size="16"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.nl"
+         download-size="176"
+         install-size="747"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.registration"
+         download-size="228"
+         install-size="353"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.core.repository"
+         download-size="927"
+         install-size="1593"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.metadata.managment"
+         download-size="513"
+         install-size="950"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.core.repository.nl"
+         download-size="33"
+         install-size="109"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.metadata.managment.nl"
+         download-size="69"
+         install-size="251"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.registration.nl"
+         download-size="15"
+         install-size="41"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.libraries.apache"
+         download-size="14028"
+         install-size="15758"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.dom4j-jaxen"
+         download-size="482"
+         install-size="532"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jdbc.jtds"
+         download-size="1"
+         install-size="1"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jdbc.mysql"
+         download-size="1"
+         install-size="1"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jexcel"
+         download-size="1"
+         install-size="1"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.repository.view"
+         download-size="166"
+         install-size="348"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.view.di"
+         download-size="56"
+         install-size="150"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.metadata"
+         download-size="1527"
+         install-size="3406"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.libraries.csv"
+         download-size="25"
+         install-size="27"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.designer.documentation"
+         download-size="62"
+         install-size="130"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.datatools.xml"
+         download-size="49"
+         install-size="93"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.view.nl"
+         download-size="8"
+         install-size="10"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.view.di.nl"
+         download-size="3"
+         install-size="2"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.designer.documentation.nl"
+         download-size="11"
+         install-size="21"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.metadata.nl"
+         download-size="173"
+         install-size="759"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="biz.aQute.bndlib"
+         download-size="1934"
+         install-size="4230"
+         version="2.4.0.201411031534"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.platform.logging"
+         download-size="4"
+         install-size="7"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.repository.items.importexport"
+         download-size="82"
+         install-size="191"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.items.importexport.ui"
+         download-size="71"
+         install-size="139"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.osgi.lib.loader"
+         download-size="20"
+         install-size="37"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.libraries.mdm"
+         download-size="1780"
+         install-size="1948"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.repository.items.importexport.nl"
+         download-size="3"
+         install-size="4"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.repository.items.importexport.ui.nl"
+         download-size="4"
+         install-size="7"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.core.net"
+         download-size="68"
+         install-size="131"
+         version="1.2.200.v20140124-2013"
+         unpack="false"/>
+
+</feature>

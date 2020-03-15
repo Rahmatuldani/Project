@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Eclipse-BundleShape: dir
+Bundle-Version: 6.0.1.20150908_1633
+Build-Jdk: 1.7.0_72
+Built-By: 
+Bundle-Name: Jersey
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven 3.2.5
+Bundle-SymbolicName: org.talend.libraries.jersey
+Archiver-Version: Plexus Archiver
+

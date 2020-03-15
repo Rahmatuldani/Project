@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Export-Package: com.csvreader
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,lib/javacsv.jar
+Eclipse-BundleShape: dir
+Bundle-Version: 6.0.1.20150908_1633
+Build-Jdk: 1.7.0_72
+Built-By: 
+Bundle-Name: Javacsv Plug-in
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven 3.2.5
+Bundle-SymbolicName: org.talend.libraries.javacsv;singleton:=true
+Archiver-Version: Plexus Archiver
+

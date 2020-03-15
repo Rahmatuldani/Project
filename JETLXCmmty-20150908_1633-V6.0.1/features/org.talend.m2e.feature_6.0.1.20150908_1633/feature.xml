@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.talend.m2e.feature"
+      label="Feature"
+      version="6.0.1.20150908_1633">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.talend.jdt.feature"
+         version="6.0.1.20150908_1633"/>
+
+   <includes
+         id="org.eclipse.wst.xml_core.feature"
+         version="3.6.1.v201409111852"/>
+
+   <includes
+         id="org.eclipse.wst.common_core.feature"
+         version="3.6.1.v201408132036"/>
+
+   <includes
+         id="org.eclipse.wst.common.fproj"
+         version="3.6.1.v201409111446"/>
+
+   <plugin
+         id="org.eclipse.m2e.archetype.common"
+         download-size="1845"
+         install-size="2076"
+         version="1.5.0.20140605-2032"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.indexer"
+         download-size="1103"
+         install-size="1306"
+         version="1.5.0.20140605-2032"/>
+
+   <plugin
+         id="org.eclipse.m2e.model.edit"
+         download-size="385"
+         install-size="1338"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.core"
+         download-size="555"
+         install-size="1318"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.launching"
+         download-size="111"
+         install-size="222"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.jdt"
+         download-size="112"
+         install-size="255"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.editor"
+         download-size="292"
+         install-size="583"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.editor.xml"
+         download-size="230"
+         install-size="500"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.runtime"
+         download-size="5480"
+         install-size="6167"
+         version="1.5.0.20140605-2032"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.runtime.slf4j.simple"
+         download-size="18"
+         install-size="25"
+         version="1.5.0.20140605-2032"/>
+
+   <plugin
+         id="org.eclipse.m2e.refactoring"
+         download-size="74"
+         install-size="155"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.lifecyclemapping.defaults"
+         download-size="9"
+         install-size="17"
+         version="1.5.0.20140606-0033"/>
+
+   <plugin
+         id="org.eclipse.m2e.discovery"
+         download-size="76"
+         install-size="165"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.core.ui"
+         download-size="751"
+         install-size="1585"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.scm"
+         download-size="67"
+         install-size="139"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.jdt.ui"
+         download-size="28"
+         install-size="60"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.profiles.core"
+         download-size="22"
+         install-size="43"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.profiles.ui"
+         download-size="43"
+         install-size="93"
+         version="1.5.0.20140606-0033"
+         unpack="false"/>
+
+   <plugin
+         id="org.slf4j.api"
+         download-size="34"
+         install-size="61"
+         version="1.7.2.v20121108-1250"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore"
+         download-size="1161"
+         install-size="2876"
+         version="2.10.1.v20140901-1043"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore.xmi"
+         download-size="224"
+         install-size="480"
+         version="2.10.1.v20140901-1043"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.edit"
+         download-size="271"
+         install-size="612"
+         version="2.10.1.v20140901-1055"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore.edit"
+         download-size="124"
+         install-size="253"
+         version="2.9.0.v20140901-1055"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jem.util"
+         download-size="110"
+         install-size="227"
+         version="2.1.200.v201404021757"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.guava"
+         download-size="2211"
+         install-size="4997"
+         version="15.0.0.v201403281430"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.jboss.serial,org.jboss.serial.classmetamodel,org.j
+ boss.serial.exception,org.jboss.serial.finalcontainers,org.jboss.seri
+ al.io,org.jboss.serial.objectmetamodel,org.jboss.serial.objectmetamod
+ el.safecloning,org.jboss.serial.persister,org.jboss.serial.references
+ ,org.jboss.serial.util
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,lib/trove.jar,lib/jboss-serialization.jar
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Jboss
+Created-By: Apache Maven 3.2.5
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Eclipse-BuddyPolicy: registered
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.libraries.jboss;singleton:=true
+Archiver-Version: Plexus Archiver
+

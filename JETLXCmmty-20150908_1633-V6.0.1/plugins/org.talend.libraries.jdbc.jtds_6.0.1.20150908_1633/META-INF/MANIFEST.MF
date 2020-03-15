@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: net.sourceforge.jtds.jdbc,net.sourceforge.jtds.jdbc.ca
+ che,net.sourceforge.jtds.jdbcx,net.sourceforge.jtds.jdbcx.proxy,net.s
+ ourceforge.jtds.ssl,net.sourceforge.jtds.util
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/jtds-1.3.1.jar,.
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Jtds Plug-in
+Created-By: Apache Maven 3.2.5
+Bundle-Vendor: .Talend SA.
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.libraries.jdbc.jtds;singleton:=true
+Archiver-Version: Plexus Archiver
+

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: org.talend.designer.components.lookup.common
+Bundle-ClassPath: .
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Components Local provider Plug-in
+Created-By: Apache Maven 3.2.5
+Require-Bundle: org.apache.commons.collections,org.talend.common.ui.ru
+ ntime,org.talend.core,org.talend.librariesmanager,org.talend.model,or
+ g.talend.libraries.apache,org.talend.designer.codegen,org.eclipse.ui.
+ workbench,org.talend.libraries.jboss;resolution:=optional,org.apache.
+ log4j
+Bundle-Vendor: .Talend SA.
+Eclipse-LazyStart: true
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Bundle-Activator: org.talend.designer.components.ComponentsLocalProvid
+ erPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.designer.components.localprovider;sing
+ leton:=true
+Archiver-Version: Plexus Archiver
+

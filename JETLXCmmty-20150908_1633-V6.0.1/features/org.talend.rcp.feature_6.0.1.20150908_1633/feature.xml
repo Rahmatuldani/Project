@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.talend.rcp.feature"
+      label="RCP Feature"
+      version="6.0.1.20150908_1633"
+      provider-name=".Talend SA.">
+
+   <description url="http://www.talend.com/online/featuresdescription.html#rcp-feature">
+      Complete description about this feature at http://www.talend.com/online/featuresdescription.html#rcp-feature
+   </description>
+
+   <copyright url="http://www.talend.com/online/copyright.txt">
+      Copyright Talend 2006, 2007
+   </copyright>
+
+   <license>
+      The licence are describe in branding feature
+   </license>
+
+   <url>
+      <update label="CORE Talend update site for milestones" url="http://talendforge.org/core/updatesite/testing/"/>
+      <discovery label="Talend web site" url="http://www.talend.com"/>
+   </url>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="4.4.0.v20140925-0400"/>
+
+   <plugin
+         id="org.talend.rcp"
+         download-size="402"
+         install-size="578"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.rcp.nl"
+         download-size="22"
+         install-size="57"
+         version="6.0.1.20150908_1633"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.libraries.apache"
+         download-size="14028"
+         install-size="15758"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.eclipse.ui.views.log"
+         download-size="136"
+         install-size="255"
+         version="1.0.500.v20140512-1221"
+         unpack="false"/>
+
+   <plugin
+         id="net.jeeeyul.eclipse.themes"
+         download-size="2592"
+         install-size="3514"
+         version="2.2.0.I20141210-114528"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.themes.core"
+         download-size="38"
+         install-size="88"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+   <plugin
+         id="net.jeeeyul.swtend"
+         download-size="172"
+         install-size="356"
+         version="2.2.5.I20140918-144458"
+         unpack="false"/>
+
+</feature>

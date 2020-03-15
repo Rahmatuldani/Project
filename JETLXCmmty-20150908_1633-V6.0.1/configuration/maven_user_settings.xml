@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <localRepository>C:\Users\Acer/.m2/repository</localRepository>
+  <profiles>
+    <profile>
+      <activation>
+        <file>
+          <exists>E:/Project/JETLXCmmty-20150908_1633-V6.0.1/configuration/maven_repository</exists>
+        </file>
+      </activation>
+      <properties>
+        <default.repository.path>E:/Project/JETLXCmmty-20150908_1633-V6.0.1/configuration/maven_repository</default.repository.path>
+      </properties>
+      <repositories>
+        <repository>
+          <id>provider-maven-repo</id>
+          <name>Maven repository</name>
+          <url>file://${default.repository.path}</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>provider-maven-plugins-repo</id>
+          <name>Maven plugins repository</name>
+          <url>file://${default.repository.path}</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>provider-repository</id>
+    </profile>
+  </profiles>
+</settings>

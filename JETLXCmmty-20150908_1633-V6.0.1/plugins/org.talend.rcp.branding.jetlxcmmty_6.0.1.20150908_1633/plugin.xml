@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<extension
+      id="product"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="org.talend.rcp.branding.jetlxcmmty.application"
+         name="TIBCO Jaspersoft ETL Community">
+      <property
+            name="windowImages"
+            value="platform:/plugin/org.talend.rcp/icons/appli_16x16.gif,platform:/plugin/org.talend.rcp/icons/appli_32x32.gif,platform:/plugin/org.talend.rcp/icons/appli_48x48.gif"/>
+      <property
+            name="startupMessageRect"
+            value="12,202,415,22"/>
+      <property
+            name="startupProgressRect"
+            value="12,224,411,14"/>
+      <property
+            name="aboutImage"
+            value="/icons/about.jpg"/>
+      <property
+            name="aboutText"
+            value="%productBlurb"/>
+      <property
+            name="preferenceCustomization"
+            value="plugin_customization.ini"/>
+      <property
+            name="cssTheme"
+            value="org.talend.themes.css.talend.default">
+      </property>
+      <property
+            name="applicationCSSResources"
+            value="platform:/plugin/org.talend.themes.css.talend/themes/">
+      </property>
+   </product>
+</extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="org.talend.rcp.jetlxcmmty.intro"
+            content="introContent.xml"
+            id="org.talend.rcp.jasper.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+      <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="platform:/plugin/org.talend.rcp/icons/appli_16x16.png"
+            id="org.talend.rcp.jetlxcmmty.intro">
+      </intro>
+      <introProductBinding
+            introId="org.talend.rcp.jetlxcmmty.intro"
+            productId="org.talend.rcp.branding.jetlxcmmty.product">
+      </introProductBinding>
+   </extension> 
+    <extension point="org.eclipse.ui.splashHandlers">
+        <splashHandlerProductBinding productId="org.talend.rcp.branding.jetlxcmmty.product" splashId="org.talend.rcp.splashHandler"/>
+    </extension>
+      <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.talend.rcp.intro.Application">
+         </run>
+      </application>
+   </extension>
+      <extension
+            point="org.talend.core.runtime.service">
+         <Service
+               class="org.talend.rcp.branding.jasper.JasperBrandingService"
+               serviceId="org.talend.core.ui.branding.IBrandingService">
+         </Service>
+      </extension>
+         <extension
+               point="org.eclipse.ui.perspectives">
+            <perspective
+                  class="org.talend.rcp.perspective.Perspective"
+                  icon="platform:/plugin/org.talend.core/icons/process_icon.png"
+                  id="org.talend.rcp.perspective"
+                  name="Integration">
+            </perspective>
+         </extension>
+         <extension
+               point="org.talend.core.talendperspectives">
+            <TalendPerspective
+                  refPerspectiveId="org.talend.rcp.perspective"
+                  talendPerspectiveId="org.talend.rcp.DesignPerspective">
+            </TalendPerspective>
+         </extension>
+         <extension
+               point="org.eclipse.ui.commands">
+            <command
+                  id="org.talend.rcp.show.about.command"
+                  name="About Jaspersoft">
+            </command>
+         </extension>
+</plugin>

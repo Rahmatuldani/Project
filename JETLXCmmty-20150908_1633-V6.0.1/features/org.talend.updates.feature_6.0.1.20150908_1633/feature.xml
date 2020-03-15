@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.talend.updates.feature"
+      label="Updates-feature"
+      version="6.0.1.20150908_1633"
+      provider-name=".Talend SA.">
+
+   <copyright url="http://www.talend.com/about-us">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <plugin
+         id="org.talend.updates.runtime"
+         download-size="61"
+         install-size="122"
+         version="6.0.1.20150908_1633"
+         unpack="false"/>
+
+</feature>

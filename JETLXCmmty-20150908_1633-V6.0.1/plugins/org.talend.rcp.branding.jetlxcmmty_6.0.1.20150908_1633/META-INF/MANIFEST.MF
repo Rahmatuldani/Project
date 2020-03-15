@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Jasper branding plugin
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.2.5
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .ide,org.eclipse.ui.intro,org.talend.rcp,org.talend.core
+Bundle-Vendor: .Talend SA.
+Eclipse-LazyStart: true
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Bundle-Activator: org.talend.rcp.branding.jasper.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.rcp.branding.jetlxcmmty;singleton:=tru
+ e
+Archiver-Version: Plexus Archiver
+

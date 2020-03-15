@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.commons.cli2,org.apache.commons.cli2.builde
+ r,org.apache.commons.cli2.commandline,org.apache.commons.cli2.option,
+ org.apache.commons.cli2.resource,org.apache.commons.cli2.util,org.apa
+ che.commons.cli2.validation,org.apache.commons.codec,org.apache.commo
+ ns.codec.binary,org.apache.commons.codec.digest,org.apache.commons.co
+ dec.language,org.apache.commons.codec.language.bm,org.apache.commons.
+ codec.net,org.apache.commons.digester,org.apache.commons.digester.ann
+ otations,org.apache.commons.digester.annotations.handlers,org.apache.
+ commons.digester.annotations.internal,org.apache.commons.digester.ann
+ otations.providers,org.apache.commons.digester.annotations.reflect,or
+ g.apache.commons.digester.annotations.rules,org.apache.commons.digest
+ er.annotations.spi,org.apache.commons.digester.annotations.utils,org.
+ apache.commons.digester.parser,org.apache.commons.digester.plugins,or
+ g.apache.commons.digester.plugins.strategies,org.apache.commons.diges
+ ter.substitution,org.apache.commons.digester.xmlrules,org.apache.comm
+ ons.lang3,org.apache.commons.math3.distribution,org.apache.commons.ma
+ th3.random
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,lib/commons-codec-1.6.jar,lib/commons-cli-2.0-SNAP
+ SHOT.jar,lib/commons-digester-2.1.jar,lib/commons-math3-3.3.jar,lib/c
+ ommons-lang3-3.3.2.jar
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Common
+Created-By: Apache Maven 3.2.5
+Require-Bundle: org.apache.commons.beanutils;visibility:=reexport,org.
+ apache.commons.logging;visibility:=reexport
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.libraries.apache.common
+Archiver-Version: Plexus Archiver
+

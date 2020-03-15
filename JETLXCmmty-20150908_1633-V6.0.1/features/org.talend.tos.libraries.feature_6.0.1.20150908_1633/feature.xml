@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.talend.tos.libraries.feature"
+      label="Libraries_feature"
+      version="6.0.1.20150908_1633">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.talend.libraries.jdbc.feature"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache"
+         download-size="14028"
+         install-size="15758"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.common"
+         download-size="10710"
+         install-size="11991"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.axis2"
+         download-size="7788"
+         install-size="8465"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.css"
+         download-size="12"
+         install-size="16"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jackson"
+         download-size="6104"
+         install-size="6813"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jxplorer"
+         download-size="2"
+         install-size="2"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jexcel"
+         download-size="1"
+         install-size="1"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.salesforce"
+         download-size="6938"
+         install-size="7475"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jboss"
+         download-size="1"
+         install-size="1"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.excel"
+         download-size="11487"
+         install-size="13371"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.http"
+         download-size="5227"
+         install-size="5833"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.xml"
+         download-size="6724"
+         install-size="7799"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.dom4j-jaxen"
+         download-size="482"
+         install-size="532"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.batik"
+         download-size="2562"
+         install-size="2845"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.chemistry"
+         download-size="88"
+         install-size="115"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.cxf"
+         download-size="6105"
+         install-size="6697"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.lucene"
+         download-size="1914"
+         install-size="2102"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.asm"
+         download-size="1"
+         install-size="3"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.bonita"
+         download-size="0"
+         install-size="0"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.ehcache"
+         download-size="759"
+         install-size="838"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.apache.google"
+         download-size="677"
+         install-size="767"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.groovy"
+         download-size="6079"
+         install-size="6796"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jax"
+         download-size="194"
+         install-size="221"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jersey"
+         download-size="0"
+         install-size="0"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.mondrian"
+         download-size="224"
+         install-size="232"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.palo"
+         download-size="109"
+         install-size="115"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.saaj"
+         download-size="0"
+         install-size="0"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.xml"
+         download-size="1230"
+         install-size="1440"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.crm"
+         download-size="15915"
+         install-size="21074"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.w3c.css.sac"
+         download-size="32"
+         install-size="56"
+         version="1.3.1.v200903091627"
+         unpack="false"/>
+
+   <plugin
+         id="org.talend.libraries.custom"
+         download-size="93"
+         install-size="101"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.guava"
+         download-size="16774"
+         install-size="18873"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.jetty"
+         download-size="3173"
+         install-size="3398"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.servlet"
+         download-size="219"
+         install-size="233"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.slf4j"
+         download-size="79"
+         install-size="92"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.zookeeper"
+         download-size="20976"
+         install-size="22564"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.hl7"
+         download-size="1"
+         install-size="5"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.nattable"
+         download-size="1"
+         install-size="2"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.talend.libraries.netsuite"
+         download-size="4340"
+         install-size="4930"
+         version="6.0.1.20150908_1633"/>
+
+   <plugin
+         id="org.eclipse.nebula.widgets.nattable.core"
+         download-size="1458"
+         install-size="3044"
+         version="1.1.0.201405012245"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.nebula.widgets.nattable.extension.glazedlists"
+         download-size="112"
+         install-size="261"
+         version="1.1.0.201405012245"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.beanutils"
+         download-size="241"
+         install-size="500"
+         version="1.8.0.v201205091237"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.httpclient"
+         download-size="314"
+         install-size="650"
+         version="3.1.0.v201012070820"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.logging"
+         download-size="44"
+         install-size="93"
+         version="1.0.4.v201101211617"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.talend.core.components_provider">
+		<ComponentsProvider
+			id="org.talend.esb.tooling.component.provider.ESBComponentsProvider"
+			class="org.talend.esb.tooling.component.provider.ESBComponentsProvider"
+			folderName="tesb" />
+	</extension>
+	<extension point="org.talend.designer.codegen.additional_jetfile">
+		<jetProvider
+			id="org.talend.esb.tooling.component.provider.ESBJetFileProvider"
+			class="org.talend.esb.tooling.component.provider.ESBJetFileProvider" />
+	</extension>
+
+	<extension point="org.talend.core.external_component">
+		<ExternalComponent
+			class="org.talend.designer.esb.webservice.WebServiceNode" />
+	</extension>
+
+	<extension point="org.talend.core.migrationTask">
+		<projecttask
+			id="org.talend.designer.esb.webservice.ConsumerFaultResponseMigrationTask"
+			class="org.talend.designer.esb.webservice.migration.ConsumerFaultResponseMigrationTask"
+			name="ConsumerFaultResponseMigrationTask"
+			description="Add more fault response message migration task"
+			breaks="5.1.1"
+			version="5.1.2"
+			beforeLogon="false" />
+	</extension>
+
+    <extension point="org.talend.core.runtime.librariesNeeded">
+
+        <libraryNeeded context="plugin:org.talend.libraries.dom4j-jaxen"
+            name="dom4j-1.6.1.jar"
+            id="dom4j"
+            uripath="platform:/plugin/org.talend.libraries.dom4j-jaxen/lib/dom4j-1.6.1.jar"
+            bundleID="" />
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-core-3.1.2.jar"
+            id="cxf-core"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-core-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="woodstox-core-asl-4.4.1.jar"
+            id="woodstox-core-asl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/woodstox-core-asl-4.4.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="stax2-api-3.1.4.jar"
+            id="stax2-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/stax2-api-3.1.4.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="xmlschema-core-2.2.1.jar"
+            id="xmlschema-core"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/xmlschema-core-2.2.1.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-core"
+                id="cxf-core"
+                name="cxf-core">
+            <library id="cxf-core" />
+            <library id="woodstox-core-asl" />
+            <library id="stax2-api" />
+            <library id="xmlschema-core" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-bindings-soap-3.1.2.jar"
+            id="cxf-rt-bindings-soap"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-bindings-soap-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-wsdl-3.1.2.jar"
+            id="cxf-rt-wsdl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-wsdl-3.1.2.jar"
+            bundleID="" />
+        <!-- ${tesb-wsdl4j} -->
+        <libraryNeeded context="plugin:javax.wsdl"
+            name="javax.wsdl_1.6.2.v201012040545.jar"
+            id="wsdl4j"
+            uripath="platform:/base/plugins/javax.wsdl_1.6.2.v201012040545.jar"
+            bundleID="" />
+        <!--TODO: libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="${tesb-asm}"
+            id="asm"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/${tesb-asm}"
+            bundleID="" /-->
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-databinding-jaxb-3.1.2.jar"
+            id="cxf-rt-databinding-jaxb"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-databinding-jaxb-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="jaxb-impl-2.2.11.jar"
+            id="jaxb-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/jaxb-impl-2.2.11.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="jaxb-core-2.2.11.jar"
+            id="jaxb-core"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/jaxb-core-2.2.11.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-bindings-soap"
+                id="cxf-rt-bindings-soap"
+                name="cxf-rt-bindings-soap">
+            <library id="cxf-rt-bindings-soap" />
+            <library id="cxf-rt-wsdl" />
+            <library id="wsdl4j" />
+            <!-- TODO: library id="asm" /-->
+            <library id="cxf-rt-databinding-jaxb" />
+            <!-- TODO: library id="jaxb-impl" />
+            <library id="jaxb-core" /-->
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-ws-policy-3.1.2.jar"
+            id="cxf-rt-ws-policy"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-ws-policy-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="neethi-3.0.3.jar"
+            id="neethi"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/neethi-3.0.3.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-ws-policy"
+                id="cxf-rt-ws-policy"
+                name="cxf-rt-ws-policy">
+            <library id="cxf-rt-ws-policy" />
+            <library id="neethi" />
+            <library id="wsdl4j" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-frontend-jaxws-3.1.2.jar"
+            id="cxf-rt-frontend-jaxws"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-frontend-jaxws-3.1.2.jar"
+            bundleID="" />
+        <!-- ${tesb-xml-resolver} -->
+        <libraryNeeded context="plugin:org.apache.xml.resolver"
+            name="org.apache.xml.resolver_1.2.0.v201005080400.jar"
+            id="xml-resolver"
+            uripath="platform:/base/plugins/org.apache.xml.resolver_1.2.0.v201005080400.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-bindings-xml-3.1.2.jar"
+            id="cxf-rt-bindings-xml"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-bindings-xml-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-frontend-simple-3.1.2.jar"
+            id="cxf-rt-frontend-simple"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-frontend-simple-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-ws-addr-3.1.2.jar"
+            id="cxf-rt-ws-addr"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-ws-addr-3.1.2.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-frontend-jaxws"
+                id="cxf-rt-frontend-jaxws"
+                name="cxf-rt-frontend-jaxws">
+            <library id="cxf-rt-frontend-jaxws" />
+            <library id="xml-resolver" />
+            <group id="cxf-rt-bindings-soap" />
+            <library id="cxf-rt-bindings-xml" />
+            <library id="cxf-rt-frontend-simple" />
+            <library id="cxf-rt-ws-addr" />
+            <group id="cxf-rt-ws-policy" />
+            <!-- its not a part of feature but used together -->
+            <library id="cxf-rt-transports-http" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="spring-context-3.2.11.RELEASE.jar"
+            id="spring-context"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/spring-context-3.2.11.RELEASE.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="spring-aop-3.2.11.RELEASE.jar"
+            id="spring-aop"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/spring-aop-3.2.11.RELEASE.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="aopalliance-1.0.jar"
+            id="aopalliance"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/aopalliance-1.0.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="spring-beans-3.2.11.RELEASE.jar"
+            id="spring-beans"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/spring-beans-3.2.11.RELEASE.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="spring-core-3.2.11.RELEASE.jar"
+            id="spring-core"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/spring-core-3.2.11.RELEASE.jar"
+            bundleID="" />
+        <!-- ${tesb-commons-logging} -->
+        <libraryNeeded context="plugin:org.apache.commons.logging"
+            name="org.apache.commons.logging_1.1.1.v201101211721.jar"
+            id="commons-logging"
+            uripath="platform:/base/plugins/org.apache.commons.logging_1.1.1.v201101211721.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="spring-expression-3.2.11.RELEASE.jar"
+            id="spring-expression"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/spring-expression-3.2.11.RELEASE.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="spring-context"
+                id="spring-context"
+                name="spring-context">
+            <library id="spring-context" />
+            <library id="spring-aop" />
+            <library id="aopalliance" />
+            <library id="spring-beans" />
+            <library id="spring-core" />
+            <library id="commons-logging" />
+            <library id="spring-expression" />
+        </libraryNeededGroup>
+
+        <!-- ${tesb-jetty-server} -->
+        <libraryNeeded context="plugin:org.eclipse.jetty.server"
+            name="org.eclipse.jetty.server_8.1.14.v20131031.jar"
+            id="jetty-server"
+            uripath="platform:/base/plugins/org.eclipse.jetty.server_8.1.14.v20131031.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:javax.servlet"
+            name="javax.servlet_3.0.0.v201112011016.jar"
+            id="javax.servlet-api"
+            uripath="platform:/base/plugins/javax.servlet_3.0.0.v201112011016.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.eclipse.jetty.util"
+            name="org.eclipse.jetty.util_8.1.14.v20131031.jar"
+            id="jetty-util"
+            uripath="platform:/base/plugins/org.eclipse.jetty.util_8.1.14.v20131031.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.eclipse.jetty.io"
+            name="org.eclipse.jetty.io_8.1.14.v20131031.jar"
+            id="jetty-io"
+            uripath="platform:/base/plugins/org.eclipse.jetty.io_8.1.14.v20131031.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.eclipse.jetty.security"
+            name="org.eclipse.jetty.security_8.1.14.v20131031.jar"
+            id="jetty-security"
+            uripath="platform:/base/plugins/org.eclipse.jetty.security_8.1.14.v20131031.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.eclipse.jetty.continuation"
+            name="org.eclipse.jetty.continuation_8.1.14.v20131031.jar"
+            id="jetty-continuation"
+            uripath="platform:/base/plugins/org.eclipse.jetty.continuation_8.1.14.v20131031.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.eclipse.jetty.http"
+            name="org.eclipse.jetty.http_8.1.14.v20131031.jar"
+            id="jetty-http"
+            uripath="platform:/base/plugins/org.eclipse.jetty.http_8.1.14.v20131031.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="jetty-server"
+                id="jetty-server"
+                name="jetty-server">
+            <library id="jetty-server" />
+            <library id="javax.servlet-api" />
+            <library id="jetty-util" />
+            <library id="jetty-io" />
+            <library id="jetty-security" />
+            <library id="jetty-continuation" />
+            <library id="jetty-http" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-transports-http-jetty-3.1.2.jar"
+            id="cxf-rt-transports-http-jetty"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-transports-http-jetty-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-transports-http-3.1.2.jar"
+            id="cxf-rt-transports-http"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-transports-http-3.1.2.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-transports-http-jetty"
+                id="cxf-rt-transports-http-jetty"
+                name="cxf-rt-transports-http-jetty">
+            <library id="cxf-rt-transports-http-jetty" />
+            <library id="cxf-rt-transports-http" />
+            <group id="jetty-server" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-rs-client-3.1.2.jar"
+            id="cxf-rt-rs-client"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-rs-client-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-frontend-jaxrs-3.1.2.jar"
+            id="cxf-rt-frontend-jaxrs"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-frontend-jaxrs-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="javax.ws.rs-api-2.0.1.jar"
+            id="javax.ws.rs-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/javax.ws.rs-api-2.0.1.jar"
+            bundleID="" />
+        <!-- ${tesb-javax.annotation-api} -->
+        <libraryNeeded context="plugin:javax.annotation"
+            name="javax.annotation_1.2.0.v201401042248.jar"
+            id="javax.annotation-api"
+            uripath="platform:/base/plugins/javax.annotation_1.2.0.v201401042248.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-rs-extension-providers-3.1.2.jar"
+            id="cxf-rt-rs-extension-providers"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-rs-extension-providers-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="jettison-1.3.7.jar"
+            id="jettison"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/jettison-1.3.7.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="stax-api-1.0.1.jar"
+            id="stax-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/stax-api-1.0.1.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-rs-client"
+                id="cxf-rt-rs-client"
+                name="cxf-rt-rs-client">
+            <library id="cxf-rt-rs-client" />
+            <library id="cxf-rt-transports-http" />
+            <library id="cxf-rt-frontend-jaxrs" />
+            <library id="javax.ws.rs-api" />
+            <library id="javax.annotation-api" />
+            <!-- its not a part of feature but used together -->
+            <library id="cxf-rt-rs-extension-providers" />
+            <library id="jettison" />
+            <library id="stax-api" />
+        </libraryNeededGroup>
+
+        <!-- ${tesb-slf4j-api} -->
+        <libraryNeeded context="plugin:org.talend.libraries.slf4j"
+            name="slf4j-api-1.7.5.jar"
+            id="slf4j-api"
+            uripath="platform:/plugin/org.talend.libraries.slf4j/lib/slf4j-api-1.7.5.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.slf4j"
+            name="slf4j-log4j12-1.7.5.jar"
+            id="slf4j-log4j12"
+            uripath="platform:/plugin/org.talend.libraries.slf4j/lib/slf4j-log4j12-1.7.5.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.apache.log4j"
+            name="org.apache.log4j_1.2.15.v201012070815.jar"
+            id="log4j"
+            uripath="platform:/base/plugins/org.apache.log4j_1.2.15.v201012070815.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="slf4j"
+                id="slf4j"
+                name="slf4j">
+            <library id="slf4j-api" />
+            <library id="slf4j-log4j12" />
+            <library id="log4j" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-ws-security-3.1.2.jar"
+            id="cxf-rt-ws-security"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-ws-security-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-security-saml-3.1.2.jar"
+            id="cxf-rt-security-saml"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-security-saml-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-security-3.1.2.jar"
+            id="cxf-rt-security"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-security-3.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="wss4j-ws-security-common-2.1.2.jar"
+            id="wss4j-ws-security-common"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/wss4j-ws-security-common-2.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="xmlsec-2.0.5.jar"
+            id="xmlsec"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/xmlsec-2.0.5.jar"
+            bundleID="" />
+        <!-- commons-codec-1.9.jar -->
+        <libraryNeeded context="plugin:org.apache.commons.codec"
+            name="org.apache.commons.codec_1.6.0.v201305230611.jar"
+            id="commons-codec"
+            uripath="platform:/base/plugins/org.apache.commons.codec_1.6.0.v201305230611.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-saml-impl-3.1.1.jar"
+            id="opensaml-saml-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-saml-impl-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-profile-api-3.1.1.jar"
+            id="opensaml-profile-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-profile-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-core-3.1.1.jar"
+            id="opensaml-core"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-core-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-saml-api-3.1.1.jar"
+            id="opensaml-saml-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-saml-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xmlsec-api-3.1.1.jar"
+            id="opensaml-xmlsec-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xmlsec-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-soap-api-3.1.1.jar"
+            id="opensaml-soap-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-soap-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-security-impl-3.1.1.jar"
+            id="opensaml-security-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-security-impl-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-security-api-3.1.1.jar"
+            id="opensaml-security-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-security-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cryptacular-1.0.jar"
+            id="cryptacular"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cryptacular-1.0.jar"
+            bundleID="" />
+        <!-- bcprov-jdk15on-1.51.jar -->
+        <libraryNeeded context="plugin:bcprov"
+            name="bcprov_1.51.0.jar"
+            id="bcprov-jdk15on"
+            uripath="platform:/base/plugins/bcprov_1.51.0.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xmlsec-impl-3.1.1.jar"
+            id="opensaml-xmlsec-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xmlsec-impl-3.1.1.jar"
+            bundleID="" />
+        <!--libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="${tesb-java-support}"
+            id="java-support"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/${tesb-java-support}"
+            bundleID="" /-->
+        <!-- ${tesb-guava} -->
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="com.google.guava_15.0.0.v201403281430.jar"
+            id="guava"
+            uripath="platform:/base/plugins/com.google.guava_15.0.0.v201403281430.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="joda-time-2.7.jar"
+            id="joda-time"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/joda-time-2.7.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xacml-impl-3.1.1.jar"
+            id="opensaml-xacml-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xacml-impl-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xacml-api-3.1.1.jar"
+            id="opensaml-xacml-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xacml-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xacml-saml-impl-3.1.1.jar"
+            id="opensaml-xacml-saml-impl"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xacml-saml-impl-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="opensaml-xacml-saml-api-3.1.1.jar"
+            id="opensaml-xacml-saml-api"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/opensaml-xacml-saml-api-3.1.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="jasypt-1.9.2.jar"
+            id="jasypt"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/jasypt-1.9.2.jar"
+            bundleID="" />
+        <!-- ${tesb-geronimo-javamail_1.4_spec} -->
+        <libraryNeeded context="plugin:org.talend.libraries.apache.axis2"
+            name="mail-1.4.jar"
+            id="mail"
+            uripath="platform:/plugin/org.talend.libraries.apache.axis2/lib/mail-1.4.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="ehcache-2.9.0.jar"
+            id="ehcache"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/ehcache-2.9.0.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="wss4j-ws-security-dom-2.1.2.jar"
+            id="wss4j-ws-security-dom"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/wss4j-ws-security-dom-2.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="wss4j-policy-2.1.2.jar"
+            id="wss4j-policy"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/wss4j-policy-2.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="wss4j-ws-security-stax-2.1.2.jar"
+            id="wss4j-ws-security-stax"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/wss4j-ws-security-stax-2.1.2.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="wss4j-ws-security-policy-stax-2.1.2.jar"
+            id="wss4j-ws-security-policy-stax"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/wss4j-ws-security-policy-stax-2.1.2.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="cxf-rt-ws-security"
+                id="cxf-rt-ws-security"
+                name="cxf-rt-ws-security">
+            <library id="cxf-rt-ws-security" />
+            <group id="cxf-rt-bindings-soap" />
+            <library id="cxf-rt-security-saml" />
+            <library id="cxf-rt-security" />
+            <library id="wss4j-ws-security-common" />
+            <library id="xmlsec" />
+            <library id="commons-codec" />
+            <library id="opensaml-saml-impl" />
+            <library id="opensaml-profile-api" />
+            <library id="opensaml-core" />
+            <library id="opensaml-saml-api" />
+            <library id="opensaml-xmlsec-api" />
+            <library id="opensaml-soap-api" />
+            <library id="opensaml-security-impl" />
+            <library id="opensaml-security-api" />
+            <library id="cryptacular" />
+            <library id="bcprov-jdk15on" />
+            <library id="opensaml-xmlsec-impl" />
+            <!--library id="java-support" /-->
+            <library id="guava" />
+            <library id="joda-time" />
+            <library id="opensaml-xacml-impl" />
+            <library id="opensaml-xacml-api" />
+            <library id="opensaml-xacml-saml-impl" />
+            <library id="opensaml-xacml-saml-api" />
+            <library id="jasypt" />
+            <!--library id="geronimo-javamail_1.4_spec" /-->
+            <library id="ehcache" />
+            <group id="slf4j" />
+            <library id="wss4j-ws-security-dom" />
+            <library id="wss4j-policy" />
+            <library id="neethi" />
+            <library id="wss4j-ws-security-stax" />
+            <library id="wss4j-bindings" />
+            <library id="wss4j-ws-security-policy-stax" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="locator-6.0.1.jar"
+            id="locator"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/locator-6.0.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="zookeeper-3.4.6.jar"
+            id="zookeeper"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/zookeeper-3.4.6.jar"
+            bundleID="" />
+        <!-- TODO: log4j -->
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-features-clustering-3.1.2.jar"
+            id="cxf-rt-features-clustering"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-features-clustering-3.1.2.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="locator"
+                id="locator"
+                name="locator">
+            <library id="locator" />
+            <group id="slf4j" />
+            <library id="zookeeper" />
+            <library id="cxf-rt-features-clustering" />
+            <group id="cxf-rt-ws-policy" />
+            <group id="cxf-rt-ws-security" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="sam-agent-6.0.1.jar"
+            id="sam-agent"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/sam-agent-6.0.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="sam-common-6.0.1.jar"
+            id="sam-common"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/sam-common-6.0.1.jar"
+            bundleID="" />
+        <!-- commons-lang-2.6.jar -->
+        <libraryNeeded context="plugin:org.apache.commons.lang"
+            name="org.apache.commons.lang_2.6.0.v201404270220.jar"
+            id="commons-lang"
+            uripath="platform:/base/plugins/org.apache.commons.lang_2.6.0.v201404270220.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="sam-agent"
+                id="sam-agent"
+                name="sam-agent">
+            <group id="cxf-rt-frontend-jaxws" />
+            <library id="sam-agent" />
+            <library id="sam-common" />
+            <library id="commons-lang" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="correlationid-policy-6.0.1.jar"
+            id="correlationid-policy"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/correlationid-policy-6.0.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="commons-jxpath-1.3.jar"
+            id="commons-jxpath"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/commons-jxpath-1.3.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="correlationid-policy"
+                id="correlationid-policy"
+                name="correlationid-policy">
+            <group id="cxf-rt-ws-policy" />
+            <library id="correlationid-policy" />
+            <library id="commons-jxpath" />
+        </libraryNeededGroup>
+
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="security-common-6.0.1.jar"
+            id="security-common"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/security-common-6.0.1.jar"
+            bundleID="" />
+        <libraryNeeded context="plugin:org.talend.libraries.esb"
+            name="cxf-rt-rs-security-xml-3.1.2.jar"
+            id="cxf-rt-rs-security-xml"
+            uripath="platform:/plugin/org.talend.libraries.esb/lib/cxf-rt-rs-security-xml-3.1.2.jar"
+            bundleID="" />
+
+        <libraryNeededGroup
+                description="security-common"
+                id="security-common"
+                name="security-common">
+            <library id="security-common" />
+            <group id="cxf-rt-rs-client" />
+            <group id="cxf-rt-ws-security" />
+        </libraryNeededGroup>
+
+    </extension>
+
+</plugin>

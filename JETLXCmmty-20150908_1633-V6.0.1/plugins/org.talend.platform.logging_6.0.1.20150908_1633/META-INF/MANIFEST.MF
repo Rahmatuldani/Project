@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Built-By: 
+Eclipse-BundleShape: dir
+Bundle-Name: Logging Plug-in
+Created-By: Apache Maven 3.2.5
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.talend.uti
+ ls,org.apache.log4j
+Bundle-Vendor: .Talend SA.
+Build-Jdk: 1.7.0_72
+Bundle-Version: 6.0.1.20150908_1633
+Eclipse-BuddyPolicy: global
+Bundle-Activator: org.talend.platform.logging.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.talend.platform.logging
+Eclipse-RegisterBuddy: org.apache.log4j
+Archiver-Version: Plexus Archiver
+
