@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f07a7b7-e451-4799-bc90-e9e4cc1745e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/cLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/mLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/vLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kasir.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kasir.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kasir/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/controller/CKasir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/controller/CLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/model/MKasir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/model/MLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/view/Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/view/VKasir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kasir/view/VLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CKasir.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MKasir.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Listener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/VKasir.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/VLogin.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +119,8 @@
       <workItem from="1584040701754" duration="7418000" />
       <workItem from="1584102190961" duration="277000" />
       <workItem from="1584231611293" duration="6004000" />
+      <workItem from="1584403521256" duration="38000" />
+      <workItem from="1584884810443" duration="1524000" />
     </task>
     <servers />
   </component>
